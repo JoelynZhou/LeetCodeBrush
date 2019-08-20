@@ -14,16 +14,17 @@
 // };
 
 var twoSum = (nums, target) => {
-  let hash = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    hash.set(nums[i], i);
-  }
-  for (let j = 0; j < nums.length; j++) {
-    const numToFind = target - nums[j];
-    if (hash.has(numToFind) && j !== hash.get(numToFind)) {
-      return [j, hash.get(numToFind)];
+    let hash = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        hash.set(nums[i], i);
     }
-  }
+    for (let j = 0; j < nums.length; j++) {
+        const numToFind = target - nums[j];
+        if (hash.has(numToFind) && j !== hash.get(numToFind)) {
+            return [j, hash.get(numToFind)];
+        }
+    }
+    return null;
 };
 
 const resp = twoSum([1, 2, 3, 4], 6);
