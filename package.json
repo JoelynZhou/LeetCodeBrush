@@ -1,0 +1,31 @@
+{
+  "name": "leetcodebrush",
+  "version": "1.0.0",
+  "description": "Leetcode Demo",
+  "main": "1.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-plugin-html": "6.0.0",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelynZhou/LeetCodeBrush.git"
+  },
+  "author": "JoelynZhou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelynZhou/LeetCodeBrush/issues"
+  },
+  "homepage": "https://github.com/JoelynZhou/LeetCodeBrush#readme",
+  "pre-commit": [
+    "lint"
+  ]
+}

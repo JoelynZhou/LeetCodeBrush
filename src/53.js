@@ -40,19 +40,19 @@ const nums = [-3, -2, 0, -1];
 console.log("res", maxSubArray(nums));
 
 function maxSubArray(nums) {
-  const maxNum = Math.max.apply(null, nums); //求数组中的最大值
-  if (maxNum >= 0) {
-    let maxSum = nums[0];
-    let thisSum = 0; //在数组不全为负的情况下，该假设才成立
-    for (let i = 0; i < nums.length; i++) {
-      thisSum += nums[i];
-      if (thisSum > maxSum) {
-        maxSum = thisSum;
-      }
-      thisSum = Math.max(0, thisSum); //很关键！！！
+    const maxNum = Math.max.apply(null, nums); //求数组中的最大值
+    if (maxNum >= 0) {
+        let maxSum = nums[0];
+        let thisSum = 0; //在数组不全为负的情况下，该假设才成立
+        for (let i = 0; i < nums.length; i++) {
+            thisSum += nums[i];
+            if (thisSum > maxSum) {
+                maxSum = thisSum;
+            }
+            thisSum = Math.max(0, thisSum); //很关键！！！
+        }
+        return maxSum;
+    } else {
+        return maxNum; //数组全为负的情况下，最大子序列即数组中最大元素组成的长度为1的数组
     }
-    return maxSum;
-  } else {
-    return maxNum; //数组全为负的情况下，最大子序列即数组中最大元素组成的长度为1的数组
-  }
 }
