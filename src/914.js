@@ -11,7 +11,19 @@ var hasGroupsSizeX = function (deck) {
             myMap.set(deck[i], 1);
         }
     }
-    console.log(myMap);
+    let list = [];
+    myMap.forEach((value) => {
+        if (list.findIndex(x => x === value) === -1) {
+            list.push(value);
+        }
+    });
+    list.sort((a, b) => a - b);
+    for (let i = 2; i <= list[list.length - 1]; i++) {
+        if (list.every(x => x % i === 0)) {
+            return true;
+        }
+    }
+    return false;
 };
 
-console.log(hasGroupsSizeX([1, 2, 3, 4, 4, 3, 2, 1]));
+console.log(hasGroupsSizeX([1]));
