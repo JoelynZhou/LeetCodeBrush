@@ -11,7 +11,7 @@ var checkValidString = function(s) {
 	let star_stack = [];
 	for (let i = 0; i < s.length; i++) {
 		if (s[i] === '(') {
-			left_stack.push(i);
+			left_stack.push(i); //关键：记录下标
 		} else if (s[i] === '*') {
 			star_stack.push(i);
 		} else {
@@ -28,11 +28,8 @@ var checkValidString = function(s) {
 		return false;
 	}
 	while (left_stack.length > 0) {
-		if (left_stack[left_stack.length - 1] > star_stack[star_stack.length - 1]) {
+		if (left_stack.pop() > star_stack.pop()) {
 			return false;
-		} else {
-			left_stack.pop();
-			star_stack.pop();
 		}
 	}
 	return true;
