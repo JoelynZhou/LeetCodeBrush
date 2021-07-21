@@ -1,4 +1,6 @@
 /**
+ * 217. 存在重复元素
+ * 思路：哈希查找是否存在
  * @param {number[]} nums
  * @return {boolean}
  */
