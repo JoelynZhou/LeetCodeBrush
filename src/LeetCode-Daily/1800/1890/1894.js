@@ -9,6 +9,7 @@
  */
 
 /**
+ * 思路一：傻瓜遍历
  * @param {number[]} chalk
  * @param {number} k
  * @return {number}
@@ -21,3 +22,21 @@ var chalkReplacer = function (chalk, k) {
 	}
 	return (k === 0 ? n : n - 1) % chalk.length;
 };
+
+/**
+ * 思路二：一轮学生求和取余
+ * @param {number[]} chalk
+ * @param {number} k
+ * @return {number}
+ */
+var chalkReplacer2 = function (chalk, k) {
+	const sum = chalk.reduce((prev, curr) => prev + curr, 0);
+	k = k % sum;
+	let n = 0;
+	while (k > 0) {
+		k -= chalk[n % chalk.length];
+		n++;
+	}
+	return (k === 0 ? n : n - 1) % chalk.length;
+};
+console.log(chalkReplacer2([3, 4, 1, 2], 25));
