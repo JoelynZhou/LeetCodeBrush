@@ -34,9 +34,9 @@ var chalkReplacer2 = function (chalk, k) {
 	k = k % sum;
 	let n = 0;
 	while (k > 0) {
-		k -= chalk[n % chalk.length];
+		k -= chalk[n];
 		n++;
 	}
-	return (k === 0 ? n : n - 1) % chalk.length;
+	return k === 0 ? n : n - 1;
 };
 console.log(chalkReplacer2([3, 4, 1, 2], 25));
