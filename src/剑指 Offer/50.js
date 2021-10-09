@@ -16,4 +16,19 @@ var firstUniqChar = function (s) {
 	}
 	return " ";
 };
-console.log(firstUniqChar("abaccdeff"));
+
+/**
+ * 思路：只出现一次，即：第一个数即最后一个数
+ * @param {string} s
+ * @return {character}
+ */
+var firstUniqChar1 = function (s) {
+	for (let i = 0; i < s.length; i++) {
+		if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
+			return s[i];
+		}
+	}
+	return " ";
+};
+
+console.log(firstUniqChar1("abaccdeff"));
