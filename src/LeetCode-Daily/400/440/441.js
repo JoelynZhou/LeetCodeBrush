@@ -1,5 +1,6 @@
 /**
  * 441. 排列硬币
+ * 思路：暴力
  * @param {number} n
  * @return {number}
  */
@@ -12,3 +13,5 @@ var arrangeCoins = function (n) {
 	}
 	return total === n ? step : step - 1;
 };
+
+// 还可以用数学和二分法来解
