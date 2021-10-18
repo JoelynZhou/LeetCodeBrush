@@ -1,5 +1,6 @@
 /**
  * 476. 数字的补数
+ * 思路 1： 数学
  * @param {number} num
  * @return {number}
  */
