@@ -1,6 +1,6 @@
 /**
  * 821. 字符的最短距离
- * O(2n)
+ * 两次遍历，O(2n)
  * @param {string} s
  * @param {character} c
  * @return {number[]}
