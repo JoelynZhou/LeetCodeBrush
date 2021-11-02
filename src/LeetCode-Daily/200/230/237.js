@@ -12,5 +12,5 @@
  */
 var deleteNode = function (node) {
 	node.val = node.next.val; // 将当前节点的值修改成下一个节点的值
-	node.next = node.val.next; // 删掉下一个节点
+	node.next = node.next.next; // 删掉下一个节点
 };
