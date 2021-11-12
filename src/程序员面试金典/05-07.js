@@ -1,6 +1,6 @@
 /**
  * 面试题 05.07. 配对交换
- * 思路：拆分奇偶位，
+ * 思路：位运算
  * @param {number} num
  * @return {number}
  */
